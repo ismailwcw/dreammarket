@@ -2,7 +2,7 @@ $(document).ready(function () {
     // form validation
     $("#checkoutForm").submit(function (event) {
         event.preventDefault();
-        
+
         let fName = $("#fname").val();
         let lName = $("#lname").val();
         let email = $("#email").val();
@@ -10,7 +10,7 @@ $(document).ready(function () {
         let city = $("#city").val();
         let country = $(".form-select").val();
         let zip = $("#zip").val();
-        
+
         let isvalid = true;
         $(".error").css("color", "#D31717");
 

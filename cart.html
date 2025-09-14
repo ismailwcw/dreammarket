@@ -1,119 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shopping Cart</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background: #121212; color: #f5f5f5; }
-    .card { background: #1f1f1f; border: 1px solid #333; }
-    .table-dark th, .table-dark td { vertical-align: middle; }
-    .product-img { width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+    body {
+      background: #121212;
+      color: #f5f5f5;
+    }
+
+    .card {
+      background: #1f1f1f;
+      border: 1px solid #333;
+    }
+
+    .table-dark th,
+    .table-dark td {
+      vertical-align: middle;
+    }
+
+    .product-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-dark bg-dark border-bottom border-secondary">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">MyStore</a>
-    <a href="checkout.html" class="btn btn-outline-light">Checkout</a>
-  </div>
-</nav>
-
-<!-- Cart Section -->
-<main class="py-5">
-  <div class="container">
-    <h1 class="h3 mb-4">Shopping Cart</h1>
-    
-    <div class="row g-4">
-      <!-- Cart Items -->
-      <div class="col-lg-8">
-        <div class="card">
-          <div class="card-body p-0">
-            <table class="table table-dark table-hover mb-0">
-              <thead>
-                <tr>
-                  <th scope="col">Product</th>
-                  <th scope="col" class="text-center">Price</th>
-                  <th scope="col" class="text-center">Quantity</th>
-                  <th scope="col" class="text-center">Total</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="cartItems">
-                <!-- Example row -->
-                <tr>
-                  <td>
-                    <div class="d-flex align-items-center">
-                      <img src="https://picsum.photos/100/100?random=1" alt="" class="product-img me-3">
-                      <span>Gaming Laptop XYZ</span>
-                    </div>
-                  </td>
-                  <td class="text-center">$1299</td>
-                  <td class="text-center">
-                    <input type="number" value="1" min="1" class="form-control form-control-sm bg-dark text-light border-secondary" style="width:70px;">
-                  </td>
-                  <td class="text-center">$1299</td>
-                  <td class="text-end">
-                    <button class="btn btn-sm btn-outline-danger">Remove</button>
-                  </td>
-                </tr>
-                <!-- More items go here -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cart Summary -->
-      <div class="col-lg-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Order Summary</h5>
-            <div class="d-flex justify-content-between">
-              <span>Subtotal</span>
-              <span id="subtotal">$1299</span>
-            </div>
-            <div class="d-flex justify-content-between">
-              <span>Shipping</span>
-              <span>$20</span>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between fw-bold">
-              <span>Total</span>
-              <span id="total">$1319</span>
-            </div>
-            <a href="checkout.html" class="btn btn-primary w-100 mt-3">Proceed to Checkout</a>
-          </div>
-        </div>
-      </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark border-bottom border-secondary">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">MyStore</a>
+      <a href="checkout.html" class="btn btn-outline-light">Checkout</a>
     </div>
+  </nav>
 
-  </div>
-</main>
+  <!-- Cart Section -->
+  <main class="py-5">
+    <div class="container">
+      <h1 class="h3 mb-4">Shopping Cart</h1>
 
-<!-- Footer -->
-<footer class="py-4 border-top border-secondary bg-dark text-center">
-  <div class="container">
-    <span class="text-secondary">&copy; <span id="year"></span> MyStore</span>
-  </div>
-</footer>
+      <div class="row g-4">
+        <!-- Cart Items -->
+        <div class="col-lg-8">
+          <div class="card">
+            <div class="card-body p-0">
+              <table class="table table-dark table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col" class="text-center">Price</th>
+                    <th scope="col" class="text-center">Quantity</th>
+                    <th scope="col" class="text-center">Total</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="cartItems">
+                  <!-- Example row -->
+                  <tr>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <img src="https://picsum.photos/100/100?random=1" alt="" class="product-img me-3">
+                        <span>Gaming Laptop XYZ</span>
+                      </div>
+                    </td>
+                    <td class="text-center">$1299</td>
+                    <td class="text-center">
+                      <input type="number" value="1" min="1"
+                        class="form-control form-control-sm bg-dark text-light border-secondary" style="width:70px;">
+                    </td>
+                    <td class="text-center">$1299</td>
+                    <td class="text-end">
+                      <button class="btn btn-sm btn-outline-danger">Remove</button>
+                    </td>
+                  </tr>
+                  <!-- More items go here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+        <!-- Cart Summary -->
+        <div class="col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Order Summary</h5>
+              <div class="d-flex justify-content-between">
+                <span>Subtotal</span>
+                <span id="subtotal">$1299</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <span>Shipping</span>
+                <span>$20</span>
+              </div>
+              <hr>
+              <div class="d-flex justify-content-between fw-bold">
+                <span>Total</span>
+                <span id="total">$1319</span>
+              </div>
+              <a href="checkout.html" class="btn btn-primary w-100 mt-3">Proceed to Checkout</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  // Example JS for live total update (demo only)
-  const qtyInputs = document.querySelectorAll("input[type=number]");
-  qtyInputs.forEach(input => {
-    input.addEventListener("input", () => {
-      const price = 1299; // demo static
-      const total = price * input.value;
-      input.closest("tr").querySelector("td:nth-child(4)").textContent = "$" + total;
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 border-top border-secondary bg-dark text-center">
+    <div class="container">
+      <span class="text-secondary">&copy; <span id="year"></span> MyStore</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Example JS for live total update (demo only)
+    const qtyInputs = document.querySelectorAll("input[type=number]");
+    qtyInputs.forEach(input => {
+      input.addEventListener("input", () => {
+        const price = 1299; // demo static
+        const total = price * input.value;
+        input.closest("tr").querySelector("td:nth-child(4)").textContent = "$" + total;
+      });
     });
-  });
-</script>
+  </script>
 </body>
+
 </html>
